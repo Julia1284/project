@@ -1,0 +1,15 @@
+.container{
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 3px solid grey;
+    width: 70%;
+}
+.header{
+    border: 3px solid grey;
+    padding: 10px 15px;
+    background-color: rgb(202, 241, 241);
+}
+.columns{
+    border: 1px solid grey;
+    padding: 10px 15px;
+}

@@ -1,13 +1,17 @@
 
+
 import './App.css';
 import Card from './components/Card';
-import List from './components/List';
+import Table from './components/Table';
+import data from './data/data.json';
 function App() {
   return (
     
     <div className='App'>
-    <List title ="Color"/>
-    <Card word = "yellow" title = "Color"/>
+    <Table/>
+    {data.map((data)=>
+     < Card english={data.english} transcription={data.transcription}/>)}
+   
     </div>
   );
 }

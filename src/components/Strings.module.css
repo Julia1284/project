@@ -1,0 +1,44 @@
+.rows{
+    border: 1px solid grey;
+
+}
+.btn_edit {
+    border: none;
+    background-color: #ffffff;
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+.btn_delete{
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.btn_save{
+    background-color: rgb(202, 241, 241);
+    border-radius: 5px;
+    border: 1px solid rgb(137, 194, 194);
+    margin: 0 5px 0 5px;
+    width: 75px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.btn_save:hover{
+    background-color: rgb(91, 127, 226);
+}
+
+.img_edit {
+    width: 90%;
+}
+.img_delete {
+    width: 70%;
+}
+
+.nonactive {
+    display: none;
+}

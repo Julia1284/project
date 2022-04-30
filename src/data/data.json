@@ -1,0 +1,47 @@
+[
+    {
+    "id":"11343",
+    "english":"carrot",
+    "transcription":"[ ˈkærət ]",
+    "russian":"морковь",
+    "tags":"овощи",
+    "tags_json":"[\"u043eu0432u043eu0449u0438\"]",
+    "display": true
+},
+    {
+    "id":"11344",
+    "english":"buttefly",
+    "transcription":"[ ˈbʌtəflaɪ ]",
+    "russian":"бабочка",
+    "tags":"насекомые",
+    "tags_json":"[\"u043du0430u0441u0435u043au043eu043cu044bu0435\"]",
+    "display": false
+    },
+    {
+    "id":"11346",
+    "english":"street",
+    "transcription":"[ stri:t ]",
+    "russian":"улица",
+    "tags":"город",
+    "tags_json":"[\"u043eu0432u043eu0449u0438\"]",
+    "display": false
+    },
+    {
+    "id":"11347",
+    "english":"car",
+    "transcription":"[ kɑ: ]",
+    "russian":"автомобиль",
+    "tags":"",
+    "tags_json":"[\"\"]",
+    "display": false
+    },
+    {
+    "id":"11350",
+    "english":"arm",
+    "transcription":"[ ɑ:m ]",
+    "russian":"рука",
+    "tags":"",
+    "tags_json":"[\"\"]",
+    "display": false
+    }
+]
