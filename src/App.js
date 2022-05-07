@@ -10,7 +10,7 @@ function App() {
     <div className='App'>
     <Table/>
     {data.map((data)=>
-     < Card english={data.english} transcription={data.transcription}/>)}
+     < Card  key ={data.id} english={data.english} transcription={data.transcription} translation ={data.russian}/>)}
    
     </div>
   );

@@ -42,3 +42,9 @@
 .nonactive {
     display: none;
 }
+
+.input{
+    font-size: 18px;
+    border-radius: 5px;
+    text-align: center;
+}

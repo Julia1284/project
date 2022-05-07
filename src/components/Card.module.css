@@ -32,3 +32,11 @@
 .btn_flip:hover{
     background-color: rgb(137, 194, 194);
 }
+.visibility{
+    display: none;
+}
+
+.translation{
+    color:rgb(91, 127, 226);
+    font-weight: bold;
+}
