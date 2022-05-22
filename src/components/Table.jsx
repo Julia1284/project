@@ -1,5 +1,5 @@
 import data from '../data/data.json';
-import Strings from './Strings';
+import Rows from './Rows';
 import styleTable from './Table.module.css';
 import ButtonAdd from './Buttonadd';
 
@@ -20,7 +20,7 @@ function Table(props) {
                 </thead>
                 <tbody>
                     {data.map((data) =>
-                        <Strings key={data.id} english={data.english} transcription={data.transcription} russian={data.russian} tags={data.tags} displayEdit={data.display} />)}
+                        <Rows key={data.id} english={data.english} transcription={data.transcription} russian={data.russian} tags={data.tags} displayEdit={data.display} />)}
                 </tbody>
             </table>
             <ButtonAdd element='word' />
