@@ -1,19 +1,24 @@
-
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Card from './components/Card';
 import Table from './components/Table';
 import ToggleCard from './components/ToggleCard';
-import data from './data/data.json';
+import Header from './components/Header';
+import Page404 from './components/Page404';
+
 function App() {
   return (
+    <Router>
+        <div className='App'>
+            <Header></Header>   
+            <Routes>
+                <Route path = '/words' element = {<Table/>}></Route>
+                <Route path = '/game' element = {<ToggleCard/>}></Route>
+                <Route path = '/' element = {<Table/>}></Route>
+                <Route path ='*' element = {<Page404/>}></Route>
+           </Routes>
+        </div>
+    </Router>
     
-    <div className='App'>
-    <Table/>
-    <ToggleCard/>
-   
-    
-    </div>
   );
 }
 

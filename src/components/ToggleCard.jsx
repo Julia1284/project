@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import data from '../data/data.json';
 import Card from './Card';
 import right from '../assets/img/right.png';
@@ -13,19 +13,20 @@ function ToggleCard({ choosenCard = -1 }) {
 
     console.log(cardIndex)
 
-    const checkIndex = (index) => {
-        if (index < 0) {
-            return cardArray.length - 1
-        }
-        else if (index >= cardArray.length) {
-            return 0
-        }
-        return index
-    }
+    const checkIndex = useCallback(
+        (index) => {
+            if (index < 0) {
+                return cardArray.length - 1
+            }
+            else if (index >= cardArray.length) {
+                return 0
+            }
+            return index
+        }, [cardArray])
     useEffect(() => {
         const newIndex = checkIndex(choosenCard);
         setCardIndex(newIndex);
-    }, [choosenCard]);
+    }, [choosenCard, checkIndex]);
 
 
 
