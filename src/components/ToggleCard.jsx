@@ -9,7 +9,9 @@ function ToggleCard({ choosenCard = -1 }) {
 
 
     const [cardArray, setCardArray] = useState(data);
-    const [cardIndex, setCardIndex] = useState(0)
+    const [cardIndex, setCardIndex] = useState(0);
+    const [count, setCount] = useState(0);
+
 
     console.log(cardIndex)
 
@@ -42,17 +44,29 @@ function ToggleCard({ choosenCard = -1 }) {
         newIndex = checkIndex(newIndex)
         setCardIndex(newIndex)
     }
+    const addWord = (english) => {
+
+        setCount(() => {
+            if (count < cardArray.length) {
+                return count + 1
+            }
+            else { return count }
+        })
+    }
 
 
     return (
-        <div className={styleToggle.wrapper}>
-            <button onClick={handleToggleCardLeft} className={styleToggle.toggle}>
-                <img src={left} alt='left'></img>
-            </button>
-            <Card key={cardArray[cardIndex].id} english={cardArray[cardIndex].english} transcription={cardArray[cardIndex].transcription} translation={cardArray[cardIndex].russian} />
-            <button onClick={handleToggleCardRight} className={styleToggle.toggle}>
-                <img src={right} alt='right'></img>
-            </button>
+        <div className={styleToggle.container}>
+            <div className={styleToggle.wrapper}>
+                <button onClick={handleToggleCardLeft} className={styleToggle.toggle}>
+                    <img src={left} alt='left'></img>
+                </button>
+                <Card key={cardArray[cardIndex].id} english={cardArray[cardIndex].english} transcription={cardArray[cardIndex].transcription} translation={cardArray[cardIndex].russian} addWord={addWord} />
+                <button onClick={handleToggleCardRight} className={styleToggle.toggle}>
+                    <img src={right} alt='right'></img>
+                </button>
+            </div>
+            <div> Выучено <span>{count}</span>/{cardArray.length}</div>
         </div>
     )
 }

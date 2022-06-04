@@ -40,3 +40,8 @@
     color:rgb(91, 127, 226);
     font-weight: bold;
 }
+.btn_flip:focus{
+    outline: 2px solid rgb(40, 93, 238);
+}
+
+
